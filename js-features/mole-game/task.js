@@ -32,16 +32,3 @@ for (let index = 1; index < 10; index++) {
 
   }
 
-/*
-		if (dead.textContent === 10) {
-      return;
-			alert ("Вы победили!");
-			dead = 0;
-			lost = 0;
-		} else if (lost.textContent === 5) {
-			alert ("Вы проиграли");
-			dead = 0;
-			lost = 0;
-			}
-	}
-*/
