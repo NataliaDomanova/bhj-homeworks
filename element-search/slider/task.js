@@ -30,3 +30,4 @@ elementLeft.onclick = function() {
 //    console.log(i);
 
 }
+

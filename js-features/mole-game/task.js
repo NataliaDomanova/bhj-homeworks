@@ -4,10 +4,13 @@ let lost = document.getElementById("lost");
 
 for (let index = 1; index < 10; index++) {
  
+	/*
 	function getHole (index) {
 		let holeClick = document.getElementById(`hole${index}`);
 		return holeClick;
 	}
+	*/
+	getHole = index => document.getElementById(`hole${index}`)
 		let hole = getHole (index);
 
 	hole.onclick = function() {
