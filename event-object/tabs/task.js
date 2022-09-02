@@ -1,30 +1,29 @@
-const buttons = document.querySelectorAll('.tab');
-//console.log(buttons);
-const contents = document.querySelectorAll('.tab__content');
-//console.log(content);
+const buttons = Array.from(document.querySelectorAll('.tab'));
+console.log(buttons);
+const contents = Array.from(document.querySelectorAll('.tab__content'));
+console.log(contents);
 const navigator = document.querySelector('.tab__navigation');
-//console.log(navigator);
-const arrButtons = Array.from(buttons);
-const arrContent = Array.from(contents);
 
+handler = function(event) { 
+    buttons.forEach((button) => {
+        if(button.classList.contains('tab_active'))
+        button.classList.remove('tab_active');
+    })
+    contents.forEach((content) => {
+        if(content.classList.contains('tab__content_active'))
+        content.classList.remove('tab__content_active'); 
+    })
+    event.target.classList.add('tab_active');   
+    //console.log(event.target)
+    //console.log(event.target.className);    
+    let index = buttons.indexOf(event.target);
+    //console.log(index);
+    contents[index].classList.add('tab__content_active')
+    //console.log(contents[index]);
+}
 
 buttons.forEach((button) => {
-for(let i = 0; i < contents.length; i++) {
-    func1 = function(e) {
-    button.classList.add('tab_active');
-    let content = contents[i];
-    if(button.classList.contains('tab_active')) {
-        content.classList.add('tab__content_active');
-       //console.log(e.target)
-    }
-    
-    }
-}   
-
-    button.addEventListener('click', func1);   
-
-})   
-   
-    //button.addEventListener('click', func2);
+    button.addEventListener('click', handler)
+})
 
 
