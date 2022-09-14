@@ -8,9 +8,11 @@ const input = document.getElementById('chat-widget__input');
 const messages = document.querySelector('.chat-widget__messages');
 
 input.addEventListener('keyup', function(event) {
-  if (event.code === 'Enter') 
   
-    {  
+  if (event.code === 'Enter' && input.value.trim() !== '') 
+  
+    {        
+      input.value !== ''
       const robotMes = ['Здравствуйте!', 'Всего хорошего!!!', 'До свидания!','Как дела?', 'Ну привет!', 'Я - робот', 'Всё отлично!'];  
       const randomMes = robotMes[Math.floor(Math.random() * robotMes.length)];     
       messages.innerHTML += `
